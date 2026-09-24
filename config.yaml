@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────────────────────
+#  Flight price monitor — settings
+#  Edit this file on GitHub (pencil icon) and commit; the next run uses it.
+# ─────────────────────────────────────────────────────────────
+
+trip_name: "Helsinki – Athens, June 2027"
+
+route:
+  origin: HEL            # Helsinki-Vantaa
+  destination: ATH       # Athens International
+  max_stops: 1           # 1 = at most one stop each way (0 = direct only)
+  include_direct: true   # false = only show itineraries with exactly one stop
+
+passengers:
+  adults: 6              # prices are checked for the whole group on one booking
+
+# Date grid: every outbound × return combination is checked (in rotation).
+# The preferred pair is checked on every run; the others rotate.
+dates:
+  outbound: ["2027-06-17", "2027-06-18", "2027-06-19"]
+  return:   ["2027-06-25", "2027-06-26", "2027-06-27"]
+  preferred: { outbound: "2027-06-18", return: "2027-06-26" }
+
+currency: EUR
+market: fi               # Google country (affects which sellers/prices appear)
+language: en
+
+# Itinerary quality filters (applied to the outbound leg, and to the
+# return leg when return details are fetched)
+filters:
+  max_layover_hours: 5         # skip itineraries with longer connections
+  min_layover_minutes: 45      # skip dangerously tight connections
+  no_overnight_layovers: true
+  max_travel_hours: 11         # door-to-door flight time per direction
+  earliest_departure: "06:00"  # local time, outbound
+  exclude_airlines: []         # e.g. ["Ryanair"]
+
+# SerpApi quota control. Free plan = 250 searches/month.
+# One daily run with 6 searches ≈ 180/month, leaving room for manual runs.
+search:
+  searches_per_run: 6          # includes the return-leg lookup below
+  fetch_return_details: true   # 1 extra search: details of cheapest return flight
+  min_searches_left: 8         # skip the run if the account is nearly empty
+  stop_after: "2027-06-17"     # stop checking after this date
+
+# When to send a ping (any rule firing sends one email)
+alerts:
+  price_limit_per_person: 350  # € per person, round trip
+  new_low_min_drop: 10         # € per person below previous all-time low
+  google_says_low: true        # ping when Google rates the price "low" for this route
+  realert_min_drop: 10         # after a ping, only ping again if € pp drops this much more
+  weekly_summary: monday       # weekly status email (set to "" to turn off)
+  send_start_email: true       # confirmation email after the very first run
+
+email:
+  to: ["ben.bergman@starsview.fi"]   # can be overridden by the EMAIL_TO secret
+  subject_prefix: "[Flight monitor]"
+
+# Filled in after you enable GitHub Pages, e.g. https://<user>.github.io/flight-monitor/
+dashboard_url: ""

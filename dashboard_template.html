@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight Price Monitor</title>
+<script>/*__CHARTJS__*/</script>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,.10);
+  --s1: #2a78d6; --s2: #eb6834; --band: rgba(42,120,214,.10); --limit: #d03b3b;
+  --good: #006300; --bad: #b3261e; --wash: rgba(42,120,214,.07);
+  --seq: #cde2fb,#b7d3f6,#9ec5f4,#86b6ef,#6da7ec,#5598e7,#3987e5,#2a78d6,#256abf,#1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
+    --s1: #3987e5; --s2: #d95926; --band: rgba(57,135,229,.16); --limit: #e66767;
+    --good: #0ca30c; --bad: #e66767; --wash: rgba(57,135,229,.12);
+    --seq: #0d366b,#104281,#184f95,#1c5cab,#256abf,#2a78d6,#3987e5,#5598e7,#6da7ec,#86b6ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,.10);
+  --s1: #3987e5; --s2: #d95926; --band: rgba(57,135,229,.16); --limit: #e66767;
+  --good: #0ca30c; --bad: #e66767; --wash: rgba(57,135,229,.12);
+  --seq: #0d366b,#104281,#184f95,#1c5cab,#256abf,#2a78d6,#3987e5,#5598e7,#6da7ec,#86b6ef;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: end; margin-bottom: 18px; }
+h1 { font-size: 22px; margin: 0; letter-spacing: -.01em; }
+.sub { color: var(--ink2); font-size: 14px; }
+.meta { color: var(--muted); font-size: 13px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+.card h2 { font-size: 15px; margin: 0 0 12px; }
+.row { display: grid; gap: 16px; grid-template-columns: 1.25fr 1fr; }
+@media (max-width: 760px) { .row { grid-template-columns: 1fr; } }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.tile .lab { font-size: 13px; color: var(--ink2); }
+.tile .val { font-size: 24px; font-weight: 600; margin-top: 2px; }
+.tile .hint { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.tile.hero .val { font-size: 40px; line-height: 1.1; }
+.up { color: var(--bad); } .down { color: var(--good); }
+.leg { padding: 10px 0; border-top: 1px solid var(--grid); }
+.leg:first-of-type { border-top: 0; padding-top: 0; }
+.leg .k { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.leg .t { font-size: 17px; font-weight: 600; }
+.leg .d { font-size: 13px; color: var(--ink2); }
+.btn { display: inline-block; padding: 9px 14px; border-radius: 8px; background: var(--s1); color: #fff;
+  text-decoration: none; font-weight: 600; font-size: 14px; margin-top: 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 10px; }
+select, .seg button { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
+.seg { display: inline-flex; }
+.seg button { border-radius: 0; margin-left: -1px; cursor: pointer; }
+.seg button:first-child { border-radius: 8px 0 0 8px; margin-left: 0; }
+.seg button:last-child { border-radius: 0 8px 8px 0; }
+.seg button[aria-pressed="true"] { background: var(--wash); font-weight: 600; }
+.linkbtn { background: none; border: 0; color: var(--s1); font: inherit; font-size: 13px; cursor: pointer; padding: 0; margin-left: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; color: var(--ink2); margin-bottom: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.key { width: 16px; height: 2px; border-radius: 2px; display: inline-block; }
+.key.band { height: 10px; border-radius: 3px; }
+.chartbox { position: relative; height: 320px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th { text-align: left; font-weight: 600; color: var(--ink2); font-size: 12px; padding: 6px 8px; border-bottom: 1px solid var(--grid); }
+td { padding: 7px 8px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; }
+.heat td.cell { text-align: center; cursor: pointer; border: 2px solid var(--surface); border-radius: 6px; font-weight: 600; padding: 12px 6px; }
+.heat td.cell.sel { outline: 2px solid var(--ink); outline-offset: -2px; }
+.heat th { text-align: center; border: 0; }
+.heat td.rowh { color: var(--ink2); font-size: 12px; font-weight: 600; border: 0; white-space: nowrap; }
+.pill { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 99px; border: 1px solid var(--border); }
+.empty { color: var(--muted); font-size: 14px; padding: 12px 0; }
+.scroll { overflow-x: auto; }
+footer { color: var(--muted); font-size: 12px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1 id="title">Flight price monitor</h1>
+      <div class="sub" id="subtitle"></div>
+    </div>
+    <div class="meta" id="lastrun"></div>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <div class="row">
+    <section class="card">
+      <div class="controls">
+        <h2 style="margin:0">Price per person over time</h2>
+        <button class="linkbtn" id="tableToggle" aria-pressed="false">Show as table</button>
+      </div>
+      <div class="controls">
+        <select id="pairSel" aria-label="Date pair"></select>
+        <div class="seg" role="group" aria-label="Time range">
+          <button data-range="30">30 days</button><button data-range="90">90 days</button><button data-range="0" aria-pressed="true">All</button>
+        </div>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="chartbox" id="chartbox"><canvas id="chart" aria-label="Price chart" role="img"></canvas></div>
+      <div class="scroll" id="tableView" hidden></div>
+    </section>
+
+    <section class="card" id="bestCard">
+      <h2>Cheapest right now</h2>
+      <div id="best"></div>
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="card">
+      <h2>Price per person by date pair</h2>
+      <div class="scroll"><table class="heat" id="heat"></table></div>
+      <div class="meta" style="margin-top:8px">Latest check for each pair. Stronger blue = more expensive. ★ = cheapest. Click a cell to see its flights and graph.</div>
+    </section>
+    <section class="card">
+      <h2 id="optTitle">Flights for selected dates</h2>
+      <div class="scroll" id="opts"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Price alerts sent</h2>
+    <div class="scroll" id="alerts"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const eur = v => v == null ? "–" : "€" + Math.round(v).toLocaleString("fi-FI");
+const dm = s => { const [y, m, d] = s.slice(0, 10).split("-"); return `${+d}.${+m}.`; };
+const wdm = s => new Date(s.slice(0, 10) + "T12:00").toLocaleDateString("en-GB", { weekday: "short" }) + " " + dm(s);
+const hm = s => s && s.includes(" ") ? s.split(" ")[1] : (s || "");
+const dur = m => m ? `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")} min` : "";
+const pairLabel = k => { const [o, r] = k.split("|"); return `${dm(o)} → ${dm(r)}`; };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const LEVEL = { low: ["▼", "Low", "--good"], typical: ["●", "Typical", "--ink2"], high: ["▲", "High", "--bad"] };
+
+let state = { pair: "all", range: 0, table: false };
+let chart;
+
+function header() {
+  document.getElementById("title").textContent = DATA.trip_name || "Flight price monitor";
+  document.getElementById("subtitle").textContent =
+    `${DATA.origin} ⇄ ${DATA.destination} · ${DATA.adults} adults · max 1 stop · outbound ${DATA.outbound_dates.map(dm).join(" / ")} · return ${DATA.return_dates.map(dm).join(" / ")}`;
+  document.getElementById("lastrun").textContent = DATA.last_run
+    ? "Last checked " + new Date(DATA.last_run).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })
+    : "Not checked yet";
+}
+
+function tiles() {
+  const b = DATA.best, d = DATA.daily;
+  const el = document.getElementById("tiles");
+  if (!b || !d.length) { el.innerHTML = `<div class="tile hero"><div class="lab">Cheapest now</div><div class="val">–</div><div class="hint">Waiting for the first check</div></div>`; return; }
+  const now = d[d.length - 1].pp;
+  const weekAgo = d.filter(x => (new Date(DATA.generated) - new Date(x.d)) / 864e5 >= 7).pop();
+  let delta = `<div class="hint">No week-old data yet</div>`;
+  if (weekAgo) {
+    const diff = now - weekAgo.pp;
+    delta = diff === 0 ? `<div class="hint">Unchanged vs 7 days ago</div>`
+      : `<div class="hint"><span class="${diff < 0 ? "down" : "up"}">${diff < 0 ? "▼" : "▲"} ${eur(Math.abs(diff))}</span> vs 7 days ago</div>`;
+  }
+  const low = d.reduce((a, x) => x.pp < a.pp ? x : a, d[0]);
+  const lv = LEVEL[b.price_level] || ["", "n/a", "--muted"];
+  const days = Math.round((new Date(b.outbound) - new Date(DATA.generated)) / 864e5);
+  const lim = DATA.limit ? (now <= DATA.limit ? `<span class="down">Under</span> your €${DATA.limit} limit` : `${eur(now - DATA.limit)} above your €${DATA.limit} limit`) : "";
+  el.innerHTML = `
+    <div class="tile hero"><div class="lab">Cheapest now, per person</div><div class="val">${eur(now)}</div>${delta}</div>
+    <div class="tile"><div class="lab">Total for ${DATA.adults}</div><div class="val">${eur(b.price_total)}</div><div class="hint">${lim}</div></div>
+    <div class="tile"><div class="lab">All-time low</div><div class="val">${eur(low.pp)}</div><div class="hint">seen ${dm(low.d)} · ${pairLabel(low.o + "|" + low.r)}</div></div>
+    <div class="tile"><div class="lab">Google's verdict</div><div class="val" style="color:var(${lv[2]})">${lv[0]} ${lv[1]}</div><div class="hint">typical ${eur(b.typical_low_pp)}–${eur(b.typical_high_pp)} · ${days} days to go</div></div>`;
+}
+
+function best() {
+  const b = DATA.best, el = document.getElementById("best");
+  if (!b) { el.innerHTML = `<div class="empty">No flights found yet.</div>`; return; }
+  const leg = (k, date, l) => `<div class="leg"><div class="k">${k} · ${wdm(date)}</div>
+      <div class="t">${hm(l.depart)} → ${hm(l.arrive)} <span style="font-weight:400;color:var(--ink2)">${esc(l.airlines)}</span></div>
+      <div class="d">${l.via ? "1 stop via " + esc(l.via) : "Direct"} · ${dur(l.duration_min)}${l.flight_numbers ? " · " + esc(l.flight_numbers) : ""}</div></div>`;
+  el.innerHTML = `
+    <div style="font-size:32px;font-weight:600;line-height:1.1">${eur(b.price_pp)} <span style="font-size:14px;font-weight:400;color:var(--ink2)">per person · ${eur(b.price_total)} total</span></div>
+    <div style="margin-top:12px">${leg("Outbound", b.outbound, b)}${b.return_leg ? leg("Return", b.return, b.return_leg)
+      : `<div class="leg"><div class="k">Return · ${wdm(b.return)}</div><div class="d">${esc(b.return_note || "See Google Flights for return options")}</div></div>`}</div>
+    ${b.google_url ? `<a class="btn" href="${esc(b.google_url)}" target="_blank" rel="noopener">Open in Google Flights</a>` : ""}`;
+}
+
+function seriesFor() {
+  const cut = state.range ? new Date(DATA.generated) - state.range * 864e5 : -Infinity;
+  const ok = t => t >= cut;
+  let ours;
+  if (state.pair === "all") ours = DATA.daily.map(x => ({ x: +new Date(x.d), y: x.pp, info: `${pairLabel(x.o + "|" + x.r)} · ${x.a}${x.via ? " via " + x.via : ""}` }));
+  else ours = Object.entries(DATA.pairs[state.pair] || {}).sort().map(([d, pp]) => ({ x: +new Date(d), y: pp, info: pairLabel(state.pair) }));
+  ours = ours.filter(p => ok(p.x));
+  const gkey = state.pair === "all" ? DATA.preferred : state.pair;
+  const google = (gkey === DATA.preferred ? DATA.google_hist : []).map(([t, pp]) => ({ x: t * 1000, y: pp })).filter(p => ok(p.x));
+  const band = DATA.band.map(b => ({ x: +new Date(b.d), lo: b.lo, hi: b.hi })).filter(p => ok(p.x));
+  return { ours, google, band };
+}
+
+function legend(s) {
+  const items = [[`<span class="key" style="background:${css("--s1")}"></span>`, state.pair === "all" ? "Cheapest of all date pairs (our checks)" : `Our checks, ${pairLabel(state.pair)}`]];
+  if (s.google.length) items.push([`<span class="key" style="background:${css("--s2")}"></span>`, `Google's price history, ${pairLabel(DATA.preferred)}`]);
+  if (s.band.length) items.push([`<span class="key band" style="background:${css("--band")}"></span>`, "Google's typical range"]);
+  if (DATA.limit) items.push([`<span class="key" style="background:${css("--limit")};height:1px"></span>`, `Your limit €${DATA.limit}`]);
+  document.getElementById("legend").innerHTML = items.map(([k, t]) => `<span>${k}${t}</span>`).join("");
+}
+
+function drawChart() {
+  const s = seriesFor();
+  legend(s);
+  const xs = [...s.ours, ...s.google, ...s.band].map(p => p.x);
+  const xmin = Math.min(...xs), xmax = Math.max(...xs);
+  const ds = [];
+  if (s.band.length) {
+    ds.push({ label: "Typical high", data: s.band.map(p => ({ x: p.x, y: p.hi })), borderWidth: 0, pointRadius: 0, fill: false, order: 5 });
+    ds.push({ label: "Typical low", data: s.band.map(p => ({ x: p.x, y: p.lo })), borderWidth: 0, pointRadius: 0, fill: "-1", backgroundColor: css("--band"), order: 5 });
+  }
+  if (DATA.limit && xs.length) ds.push({ label: "Your limit", data: [{ x: xmin, y: DATA.limit }, { x: xmax, y: DATA.limit }], borderColor: css("--limit"), borderWidth: 1, pointRadius: 0, order: 4 });
+  if (s.google.length) ds.push({ label: "Google history", data: s.google, borderColor: css("--s2"), borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0, order: 2 });
+  ds.push({ label: "Our checks", data: s.ours, borderColor: css("--s1"), backgroundColor: css("--s1"), borderWidth: 2,
+    pointRadius: s.ours.map((_, i) => i === s.ours.length - 1 ? 5 : (s.ours.length < 12 ? 3 : 0)),
+    pointBorderColor: css("--surface"), pointBorderWidth: 2, pointHoverRadius: 6, tension: 0, order: 1 });
+
+  const cfg = {
+    type: "line",
+    data: { datasets: ds },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false, parsing: true,
+      interaction: { mode: "nearest", axis: "x", intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: css("--surface"), titleColor: css("--ink"), bodyColor: css("--ink2"),
+          borderColor: css("--border"), borderWidth: 1, padding: 10, displayColors: true, boxWidth: 8, boxHeight: 8,
+          filter: it => !["Typical high", "Typical low", "Your limit"].includes(it.dataset.label),
+          callbacks: {
+            title: it => it.length ? new Date(it[0].parsed.x).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "",
+            label: it => `${it.dataset.label}: ${eur(it.parsed.y)} pp`,
+            afterLabel: it => it.raw.info || "",
+          },
+        },
+      },
+      scales: {
+        x: { type: "linear", min: xmin, max: xmax + (xmax - xmin) * 0.03, grid: { display: false }, border: { color: css("--axis") },
+          ticks: { color: css("--muted"), maxTicksLimit: 7, callback: v => { const d = new Date(v); return `${d.getDate()}.${d.getMonth() + 1}.`; } } },
+        y: { grid: { color: css("--grid") }, border: { display: false }, ticks: { color: css("--muted"), callback: v => eur(v) }, grace: "8%" },
+      },
+    },
+  };
+  if (chart) chart.destroy();
+  chart = new Chart(document.getElementById("chart"), cfg);
+  tableView(s);
+}
+
+function tableView(s) {
+  const rows = s.ours.slice().reverse().map(p => `<tr><td>${new Date(p.x).toLocaleDateString("en-GB")}</td><td class="num">${eur(p.y)}</td><td>${esc(p.info)}</td></tr>`).join("");
+  document.getElementById("tableView").innerHTML = rows
+    ? `<table><tr><th>Checked</th><th class="num">Per person</th><th>Details</th></tr>${rows}</table>` : `<div class="empty">No data in this range.</div>`;
+}
+
+function heat() {
+  const g = DATA.grid, vals = Object.values(g).map(c => c.pp).filter(v => v != null);
+  const el = document.getElementById("heat");
+  if (!vals.length) { el.innerHTML = `<tr><td class="empty">No data yet.</td></tr>`; return; }
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  const ramp = css("--seq").split(",").map(s => s.trim());
+  const lum = hex => { const n = parseInt(hex.slice(1), 16); const c = [n >> 16, (n >> 8) & 255, n & 255].map(v => { v /= 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]; };
+  let html = `<tr><th></th>${DATA.return_dates.map(r => `<th>Back ${wdm(r)}</th>`).join("")}</tr>`;
+  for (const o of DATA.outbound_dates) {
+    html += `<tr><td class="rowh">Out ${wdm(o)}</td>`;
+    for (const r of DATA.return_dates) {
+      const k = `${o}|${r}`, c = g[k];
+      if (!c || c.pp == null) { html += `<td class="cell" style="color:var(--muted);background:var(--page)" data-k="${k}">–</td>`; continue; }
+      const t = hi === lo ? 0.5 : (c.pp - lo) / (hi - lo);
+      const bg = ramp[Math.min(ramp.length - 1, Math.round(t * (ramp.length - 1)))];
+      const fg = lum(bg) > 0.35 ? "#0b0b0b" : "#ffffff";
+      html += `<td class="cell${state.pair === k ? " sel" : ""}" data-k="${k}" style="background:${bg};color:${fg}" title="Checked ${esc(c.checked_at || "")}">${eur(c.pp)}${c.pp === lo ? " ★" : ""}</td>`;
+    }
+    html += `</tr>`;
+  }
+  el.innerHTML = html;
+  el.querySelectorAll("td.cell").forEach(td => td.addEventListener("click", () => selectPair(td.dataset.k)));
+}
+
+function opts() {
+  const k = state.pair === "all" ? (DATA.best ? `${DATA.best.outbound}|${DATA.best.return}` : null) : state.pair;
+  document.getElementById("optTitle").textContent = k ? `Flights for ${pairLabel(k)}` : "Flights";
+  const list = (k && DATA.options[k]) || [];
+  document.getElementById("opts").innerHTML = list.length
+    ? `<table><tr><th>Airline</th><th>Outbound</th><th>Stop</th><th class="num">Per person</th></tr>${list.map(o =>
+      `<tr><td>${esc(o.airlines)}</td><td>${hm(o.depart)}–${hm(o.arrive)}<br><span class="meta">${dur(o.duration_min)}</span></td>
+        <td>${o.via ? esc(o.via) + `<br><span class="meta">${dur(o.max_layover_min)}</span>` : "Direct"}</td><td class="num">${eur(o.price_pp)}</td></tr>`).join("")}</table>
+      <div class="meta" style="margin-top:8px">Round-trip price for the cheapest return with each outbound flight.</div>`
+    : `<div class="empty">No flights matching your filters for these dates.</div>`;
+}
+
+function alerts() {
+  const a = DATA.alerts;
+  document.getElementById("alerts").innerHTML = a.length
+    ? `<table><tr><th>Date</th><th class="num">Per person</th><th>Flights</th><th>Why</th></tr>${a.map(x =>
+      `<tr><td>${dm(x.date)}</td><td class="num">${eur(x.price_pp)}</td><td>${pairLabel(x.outbound + "|" + x.return)} · ${esc(x.airlines)}</td><td>${x.reasons.map(esc).join("<br>")}</td></tr>`).join("")}</table>`
+    : `<div class="empty">No alerts yet — you'll get an email when the price is right.</div>`;
+}
+
+function selectPair(k) {
+  state.pair = state.pair === k ? "all" : k;
+  document.getElementById("pairSel").value = state.pair;
+  heat(); opts(); drawChart();
+}
+
+function init() {
+  header(); tiles(); best();
+  const sel = document.getElementById("pairSel");
+  const keys = [];
+  for (const o of DATA.outbound_dates) for (const r of DATA.return_dates) if (r > o) keys.push(`${o}|${r}`);
+  sel.innerHTML = `<option value="all">All date pairs (cheapest)</option>` + keys.map(k => `<option value="${k}">${pairLabel(k)}${k === DATA.preferred ? " (preferred)" : ""}</option>`).join("");
+  sel.addEventListener("change", e => { state.pair = e.target.value; heat(); opts(); drawChart(); });
+  document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+    state.range = +b.dataset.range;
+    document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    drawChart();
+  }));
+  const tt = document.getElementById("tableToggle");
+  tt.addEventListener("click", () => {
+    state.table = !state.table;
+    tt.textContent = state.table ? "Show as chart" : "Show as table";
+    document.getElementById("chartbox").hidden = state.table;
+    document.getElementById("legend").hidden = state.table;
+    document.getElementById("tableView").hidden = !state.table;
+  });
+  heat(); opts(); alerts();
+  if (DATA.daily.length || DATA.google_hist.length) drawChart();
+  else document.getElementById("chartbox").innerHTML = `<div class="empty">The graph appears after the first check.</div>`;
+  document.getElementById("foot").textContent = `Prices from Google Flights via SerpApi, checked automatically every day. ${DATA.searches_left != null ? DATA.searches_left + " searches left this month. " : ""}Always confirm the price before booking.`;
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { heat(); drawChart(); });
+}
+init();
+</script>
+</body>
+</html>
