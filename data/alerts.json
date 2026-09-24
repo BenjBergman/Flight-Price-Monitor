@@ -1,0 +1,13 @@
+[
+  {
+    "date": "2026-09-24",
+    "price_pp": 243,
+    "outbound": "2027-06-18",
+    "return": "2027-06-25",
+    "airlines": "Aegean",
+    "reasons": [
+      "Price is under your limit of €350 per person",
+      "Google Flights rates this price as LOW for this route"
+    ]
+  }
+]
