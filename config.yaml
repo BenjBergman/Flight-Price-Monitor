@@ -57,4 +57,4 @@ email:
   subject_prefix: "[Flight monitor]"
 
 # Filled in after you enable GitHub Pages, e.g. https://<user>.github.io/flight-monitor/
-dashboard_url: ""
+dashboard_url: "https://benjbergman.github.io/Flight-Price-Monitor/"
