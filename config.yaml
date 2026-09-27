@@ -17,8 +17,8 @@ passengers:
 # Date grid: every outbound × return combination is checked (in rotation).
 # The preferred pair is checked on every run; the others rotate.
 dates:
-  outbound: ["2027-06-17", "2027-06-18", "2027-06-19"]
-  return:   ["2027-06-25", "2027-06-26", "2027-06-27"]
+  outbound: ["2027-06-18", "2027-06-19"]
+  return:   ["2027-06-26"]
   preferred: { outbound: "2027-06-18", return: "2027-06-26" }
 
 currency: EUR
