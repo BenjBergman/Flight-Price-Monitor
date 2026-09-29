@@ -2,7 +2,7 @@
   "2027-06-18|2027-06-26": {
     "outbound": "2027-06-18",
     "return": "2027-06-26",
-    "checked_at": "2026-09-28T08:32+03:00",
+    "checked_at": "2026-09-29T08:31+03:00",
     "price_level": null,
     "typical_low_pp": null,
     "typical_high_pp": null,
@@ -23,9 +23,9 @@
         "min_layover_min": 65,
         "overnight": false,
         "flight_numbers": "KL 1254, KL 1957",
-        "price_total": 1512,
-        "price_pp": 252,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0lsSjBKRUFJYUEwVlZVamdjY1BIQUNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
+        "price_total": 1542,
+        "price_pp": 257,
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l6TFFKRUFJYUEwVlZVamdjY01EWUNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -43,29 +43,9 @@
         "min_layover_min": 220,
         "overnight": false,
         "flight_numbers": "VL 2467, A3 803",
-        "price_total": 2307,
-        "price_pp": 384,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzVXVERJME5qZDhRVE00TURNak1Sb0xDSWlLRGhBQ0dnTkZWVkk0SEhEdGd4QT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiQTMiLCI4MDMiXV1d"
-      },
-      {
-        "airlines": "Lufthansa City Airlines + Lufthansa",
-        "airline_list": [
-          "Lufthansa City Airlines",
-          "Lufthansa"
-        ],
-        "stops": 1,
-        "via": "MUC",
-        "via_names": "Munich International Airport",
-        "depart": "2027-06-18 06:00",
-        "arrive": "2027-06-18 11:55",
-        "duration_min": 355,
-        "max_layover_min": 50,
-        "min_layover_min": 50,
-        "overnight": false,
-        "flight_numbers": "VL 2467, LH 1750",
-        "price_total": 2325,
-        "price_pp": 388,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzlXVERJME5qZDhURWd4TnpVd0l6RWFDd2lRbUE0UUFob0RSVlZTT0J4dzc1TVEiLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
+        "price_total": 2145,
+        "price_pp": 358,
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzVXVERJME5qZDhRVE00TURNak1Sb0xDTUNMRFJBQ0dnTkZWVkk0SEhDKzd3ND0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiQTMiLCI4MDMiXV1d"
       },
       {
         "airlines": "KLM",
@@ -84,7 +64,7 @@
         "flight_numbers": "KL 1248, KL 1955",
         "price_total": 2334,
         "price_pp": 389,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzFMVERFeU5EaDhTMHd4T1RVMUdnc0lySjhPRUFJYUEwVlZVamdjY0l1Y0VBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI0OCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU1Il1dXQ=="
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzFMVERFeU5EaDhTMHd4T1RVMUdnc0lySjhPRUFJYUEwVlZVamdjY0xtWEVBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI0OCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU1Il1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -102,9 +82,29 @@
         "min_layover_min": 170,
         "overnight": false,
         "flight_numbers": "VL 853, A3 831",
-        "price_total": 2355,
-        "price_pp": 392,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzFXVERnMU0zeEJNemd6TVNNeEdnc0lzSzhPRUFJYUEwVlZVamdjY0t5dUVBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJGUkEiLG51bGwsIlZMIiwiODUzIl0sWyJGUkEiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgzMSJdXV0="
+        "price_total": 2415,
+        "price_pp": 402,
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzFXVERnMU0zeEJNemd6TVNNeEdnc0lvTjRPRUFJYUEwVlZVamdjY1BYZUVBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJGUkEiLG51bGwsIlZMIiwiODUzIl0sWyJGUkEiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgzMSJdXV0="
+      },
+      {
+        "airlines": "Lufthansa City Airlines + Lufthansa",
+        "airline_list": [
+          "Lufthansa City Airlines",
+          "Lufthansa"
+        ],
+        "stops": 1,
+        "via": "MUC",
+        "via_names": "Munich International Airport",
+        "depart": "2027-06-18 06:00",
+        "arrive": "2027-06-18 11:55",
+        "duration_min": 355,
+        "max_layover_min": 50,
+        "min_layover_min": 50,
+        "overnight": false,
+        "flight_numbers": "VL 2467, LH 1750",
+        "price_total": 2445,
+        "price_pp": 408,
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzlXVERJME5qZDhURWd4TnpVd0l6RWFDd2p3OVE0UUFob0RSVlZTT0J4dzRQa1EiLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Lufthansa",
@@ -122,9 +122,9 @@
         "min_layover_min": 100,
         "overnight": false,
         "flight_numbers": "VL 849, LH 1284",
-        "price_total": 2377,
-        "price_pp": 396,
-        "departure_token": "WyJDalJJVTB4allXYzJjM0JFTjJkQlZEWlJXRkZDUnkwdExTMHRMUzB0TFc5cmJIWXhORUZCUVVGQlIzRTFMVGxuUjAxWmVHdEJFZzVXVERnME9YeE1TREV5T0RRak1Sb0xDS3pBRGhBQ0dnTkZWVkk0SEhEVndSQT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJGUkEiLG51bGwsIlZMIiwiODQ5Il0sWyJGUkEiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJMSCIsIjEyODQiXV1d"
+        "price_total": 2497,
+        "price_pp": 416,
+        "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzVXVERnME9YeE1TREV5T0RRak1Sb0xDSXllRHhBQ0dnTkZWVkk0SEhDNXB4RT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJGUkEiLG51bGwsIlZMIiwiODQ5Il0sWyJGUkEiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJMSCIsIjEyODQiXV1d"
       }
     ],
     "options_found": 7
@@ -653,22 +653,22 @@
     "stops": 1,
     "via": "AMS",
     "via_names": "Amsterdam Airport Schiphol",
-    "depart": "2027-06-19 18:25",
-    "arrive": "2027-06-20 01:10",
+    "depart": "2027-06-18 18:25",
+    "arrive": "2027-06-19 01:10",
     "duration_min": 405,
     "max_layover_min": 65,
     "min_layover_min": 65,
     "overnight": false,
     "flight_numbers": "KL 1254, KL 1957",
-    "price_total": 1566,
-    "price_pp": 261,
-    "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0kzSVVKRUFJYUEwVlZVamdjY0ptbUNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ==",
-    "outbound": "2027-06-19",
+    "price_total": 1716,
+    "price_pp": 286,
+    "departure_token": "WyJDalJJYVd4SGQwWlpPWFE1VWxWQlEyazVRM2RDUnkwdExTMHRMVzlyYW5FeE55MXVNVUZCUVVGQlIzRTNWRlJCVHpGR1FubEJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l6TFFKRUFJYUEwVlZVamdjY01EWUNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ==",
+    "outbound": "2027-06-18",
     "return": "2027-06-26",
     "price_level": null,
     "typical_low_pp": null,
     "typical_high_pp": null,
-    "google_url": "https://www.google.com/travel/flights?hl=en&gl=fi&curr=EUR&tfs=CBwQAhogEgoyMDI3LTA2LTE5KAFqBwgBEgNIRUxyBwgBEgNBVEgaIBIKMjAyNy0wNi0yNigBagcIARIDQVRIcgcIARIDSEVMQAFAAUABQAFAAUABSAFwAZgBAQ&tfu=EgIIAQ",
+    "google_url": "https://www.google.com/travel/flights?hl=en&gl=fi&curr=EUR&tfs=CBwQAhogEgoyMDI3LTA2LTE4KAFqBwgBEgNIRUxyBwgBEgNBVEgaIBIKMjAyNy0wNi0yNigBagcIARIDQVRIcgcIARIDSEVMQAFAAUABQAFAAUABSAFwAZgBAQ&tfu=EgIIAQ",
     "return_leg": {
       "airlines": "KLM",
       "via": "AMS",
@@ -902,31 +902,12 @@
   "2027-06-19|2027-06-26": {
     "outbound": "2027-06-19",
     "return": "2027-06-26",
-    "checked_at": "2026-09-28T08:32+03:00",
-    "price_level": null,
-    "typical_low_pp": null,
-    "typical_high_pp": null,
+    "checked_at": "2026-09-29T08:31+03:00",
+    "price_level": "low",
+    "typical_low_pp": 308,
+    "typical_high_pp": 400,
     "google_url": "https://www.google.com/travel/flights?hl=en&gl=fi&curr=EUR&tfs=CBwQAhogEgoyMDI3LTA2LTE5KAFqBwgBEgNIRUxyBwgBEgNBVEgaIBIKMjAyNy0wNi0yNigBagcIARIDQVRIcgcIARIDSEVMQAFAAUABQAFAAUABSAFwAZgBAQ&tfu=EgIIAQ",
     "options": [
-      {
-        "airlines": "KLM",
-        "airline_list": [
-          "KLM"
-        ],
-        "stops": 1,
-        "via": "AMS",
-        "via_names": "Amsterdam Airport Schiphol",
-        "depart": "2027-06-19 18:25",
-        "arrive": "2027-06-20 01:10",
-        "duration_min": 405,
-        "max_layover_min": 65,
-        "min_layover_min": 65,
-        "overnight": false,
-        "flight_numbers": "KL 1254, KL 1957",
-        "price_total": 1482,
-        "price_pp": 247,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0kzSVVKRUFJYUEwVlZVamdjY0ptbUNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
-      },
       {
         "airlines": "Norwegian",
         "airline_list": [
@@ -942,9 +923,28 @@
         "min_layover_min": null,
         "overnight": false,
         "flight_numbers": "D8 2962",
-        "price_total": 1782,
-        "price_pp": 297,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZ1pFT0RJNU5qSWFDd2pvN3dvUUFob0RSVlZTT0J4dzM3QU0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkQ4IiwiMjk2MiJdXV0="
+        "price_total": 1602,
+        "price_pp": 267,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZ1pFT0RJNU5qSWFDd2lZNHdrUUFob0RSVlZTT0J4d3VJMEwiLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkQ4IiwiMjk2MiJdXV0="
+      },
+      {
+        "airlines": "KLM",
+        "airline_list": [
+          "KLM"
+        ],
+        "stops": 1,
+        "via": "AMS",
+        "via_names": "Amsterdam Airport Schiphol",
+        "depart": "2027-06-19 18:25",
+        "arrive": "2027-06-20 01:10",
+        "duration_min": 405,
+        "max_layover_min": 65,
+        "min_layover_min": 65,
+        "overnight": false,
+        "flight_numbers": "KL 1254, KL 1957",
+        "price_total": 1716,
+        "price_pp": 286,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l4THdLRUFJYUEwVlZVamdjY1BqeUN3PT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -962,29 +962,9 @@
         "min_layover_min": 220,
         "overnight": false,
         "flight_numbers": "VL 2467, A3 803",
-        "price_total": 2307,
-        "price_pp": 384,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzVXVERJME5qZDhRVE00TURNak1Sb0xDSWlLRGhBQ0dnTkZWVkk0SEhEdGd4QT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiQTMiLCI4MDMiXV1d"
-      },
-      {
-        "airlines": "Lufthansa City Airlines + Lufthansa",
-        "airline_list": [
-          "Lufthansa City Airlines",
-          "Lufthansa"
-        ],
-        "stops": 1,
-        "via": "MUC",
-        "via_names": "Munich International Airport",
-        "depart": "2027-06-19 06:00",
-        "arrive": "2027-06-19 11:55",
-        "duration_min": 355,
-        "max_layover_min": 50,
-        "min_layover_min": 50,
-        "overnight": false,
-        "flight_numbers": "VL 2467, LH 1750",
-        "price_total": 2325,
-        "price_pp": 388,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzlXVERJME5qZDhURWd4TnpVd0l6RWFDd2lRbUE0UUFob0RSVlZTT0J4dzc1TVEiLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
+        "price_total": 2367,
+        "price_pp": 394,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZ3hXVERJME5qZDhRVE00TURNYUN3ajR1QTRRQWhvRFJWVlNPQnh3dzdRUSIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIk1VQyIsbnVsbCwiVkwiLCIyNDY3Il0sWyJNVUMiLCIyMDI3LTA2LTE5IiwiQVRIIixudWxsLCJBMyIsIjgwMyJdXV0="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -1002,28 +982,49 @@
         "min_layover_min": 170,
         "overnight": false,
         "flight_numbers": "VL 853, A3 831",
-        "price_total": 2355,
-        "price_pp": 392,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzFXVERnMU0zeEJNemd6TVNNeEdnc0lzSzhPRUFJYUEwVlZVamdjY0t5dUVBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJGUkEiLG51bGwsIlZMIiwiODUzIl0sWyJGUkEiLCIyMDI3LTA2LTE5IiwiQVRIIixudWxsLCJBMyIsIjgzMSJdXV0="
+        "price_total": 2415,
+        "price_pp": 402,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZ3RXVERnMU0zeEJNemd6TVJvTENLRGVEaEFDR2dORlZWSTRISEQxM2hBPSIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkEzIiwiODMxIl1dXQ=="
       },
       {
-        "airlines": "KLM",
+        "airlines": "Lufthansa City Airlines + Lufthansa",
         "airline_list": [
-          "KLM"
+          "Lufthansa City Airlines",
+          "Lufthansa"
         ],
         "stops": 1,
-        "via": "AMS",
-        "via_names": "Amsterdam Airport Schiphol",
-        "depart": "2027-06-19 07:00",
-        "arrive": "2027-06-19 16:30",
-        "duration_min": 570,
-        "max_layover_min": 230,
-        "min_layover_min": 230,
+        "via": "MUC",
+        "via_names": "Munich International Airport",
+        "depart": "2027-06-19 06:00",
+        "arrive": "2027-06-19 11:55",
+        "duration_min": 355,
+        "max_layover_min": 50,
+        "min_layover_min": 50,
         "overnight": false,
-        "flight_numbers": "KL 1248, KL 1955",
-        "price_total": 2610,
-        "price_pp": 435,
-        "departure_token": "WyJDalJJVG1ONVRFUmZhMU5YTFZWQlRGRjRTbmRDUnkwdExTMHRMUzB0TFhCcWRHd3hNMEZCUVVGQlIzRTFMVGx6U2s5bGJIRkJFZzFMVERFeU5EaDhTMHd4T1RVMUdnc0kvUFlQRUFJYUEwVlZVamdjY00yUkVnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI0OCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU1Il1dXQ=="
+        "flight_numbers": "VL 2467, LH 1750",
+        "price_total": 2445,
+        "price_pp": 408,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZzFXVERJME5qZDhURWd4TnpVd0dnc0k4UFVPRUFJYUEwVlZVamdjY09ENUVBPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
+      },
+      {
+        "airlines": "Lufthansa City Airlines + Lufthansa",
+        "airline_list": [
+          "Lufthansa City Airlines",
+          "Lufthansa"
+        ],
+        "stops": 1,
+        "via": "FRA",
+        "via_names": "Frankfurt Airport",
+        "depart": "2027-06-19 06:45",
+        "arrive": "2027-06-19 13:25",
+        "duration_min": 400,
+        "max_layover_min": 75,
+        "min_layover_min": 75,
+        "overnight": false,
+        "flight_numbers": "VL 853, LH 1280",
+        "price_total": 3037,
+        "price_pp": 506,
+        "departure_token": "WyJDalJJWTBFNFRHTllVMVZ4YmpCQlJVSndVRUZDUnkwdExTMHRMUzB0TFMwdGIzbGxOMEZCUVVGQlIzRTNWRlZKU2tsVmJUQkJFZ3hXVERnMU0zeE1TREV5T0RBYUN3ajh3eElRQWhvRFJWVlNPQnh3M0lZViIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkxIIiwiMTI4MCJdXV0="
       }
     ],
     "options_found": 8
