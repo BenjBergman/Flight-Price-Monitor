@@ -19,5 +19,15 @@
     "reasons": [
       "Price is under your limit of €350 per person"
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "price_pp": 262,
+    "outbound": "2027-06-18",
+    "return": "2027-06-26",
+    "airlines": "KLM",
+    "reasons": [
+      "Price is under your limit of €350 per person"
+    ]
   }
 ]
