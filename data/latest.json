@@ -2,7 +2,7 @@
   "2027-06-18|2027-06-26": {
     "outbound": "2027-06-18",
     "return": "2027-06-26",
-    "checked_at": "2026-11-03T14:51+02:00",
+    "checked_at": "2026-11-04T15:02+02:00",
     "price_level": "low",
     "typical_low_pp": 308,
     "typical_high_pp": 400,
@@ -23,9 +23,9 @@
         "min_layover_min": 65,
         "overnight": false,
         "flight_numbers": "KL 1254, KL 1957",
-        "price_total": 1602,
-        "price_pp": 267,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l2T01KRUFJYUEwVlZVamdjY1BUMkNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
+        "price_total": 1518,
+        "price_pp": 253,
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0k3S0VKRUFJYUEwVlZVamdjY09XMkNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -45,7 +45,7 @@
         "flight_numbers": "VL 2467, A3 803",
         "price_total": 2475,
         "price_pp": 412,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZ3hXVERJME5qZDhRVE00TURNYUN3aW9qUThRQWhvRFJWVlNPQnh3aXZFUSIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIk1VQyIsbnVsbCwiVkwiLCIyNDY3Il0sWyJNVUMiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgwMyJdXV0="
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZ3hXVERJME5qZDhRVE00TURNYUN3aW9qUThRQWhvRFJWVlNPQnh3a1lBUiIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIk1VQyIsbnVsbCwiVkwiLCIyNDY3Il0sWyJNVUMiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgwMyJdXV0="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -65,7 +65,7 @@
         "flight_numbers": "VL 2461, A3 807",
         "price_total": 2475,
         "price_pp": 412,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZ3hXVERJME5qRjhRVE00TURjYUN3aW9qUThRQWhvRFJWVlNPQnh3aXZFUSIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIk1VQyIsbnVsbCwiVkwiLCIyNDYxIl0sWyJNVUMiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgwNyJdXV0="
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZ3hXVERJME5qRjhRVE00TURjYUN3aW9qUThRQWhvRFJWVlNPQnh3a1lBUiIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIk1VQyIsbnVsbCwiVkwiLCIyNDYxIl0sWyJNVUMiLCIyMDI3LTA2LTE4IiwiQVRIIixudWxsLCJBMyIsIjgwNyJdXV0="
       },
       {
         "airlines": "Lufthansa City Airlines + Lufthansa",
@@ -85,7 +85,7 @@
         "flight_numbers": "VL 2467, LH 1750",
         "price_total": 2493,
         "price_pp": 416,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZzFXVERJME5qZDhURWd4TnpVd0dnc0lzSnNQRUFJYUEwVlZVamdjY09hQUVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZzFXVERJME5qZDhURWd4TnpVd0dnc0lzSnNQRUFJYUEwVlZVamdjY1B5UEVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
       },
       {
         "airlines": "KLM",
@@ -102,9 +102,9 @@
         "min_layover_min": 230,
         "overnight": false,
         "flight_numbers": "KL 1248, KL 1955",
-        "price_total": 2634,
-        "price_pp": 439,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZzFMVERFeU5EaDhTMHd4T1RVMUdnc0kzSWtRRUFJYUEwVlZVamdjY0pMOEVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI0OCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU1Il1dXQ=="
+        "price_total": 2616,
+        "price_pp": 436,
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZzFMVERFeU5EaDhTMHd4T1RVMUdnc0kxUHNQRUFJYUEwVlZVamdjY0t2OEVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI0OCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU1Il1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -124,7 +124,7 @@
         "flight_numbers": "VL 853, A3 831",
         "price_total": 2793,
         "price_pp": 466,
-        "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZ3RXVERnMU0zeEJNemd6TVJvTENNaUZFUkFDR2dORlZWSTRISERKaGhNPSIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTgiLCJBVEgiLG51bGwsIkEzIiwiODMxIl1dXQ=="
+        "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZ3RXVERnMU0zeEJNemd6TVJvTENNaUZFUkFDR2dORlZWSTRISERKbHhNPSIsW1siSEVMIiwiMjAyNy0wNi0xOCIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTgiLCJBVEgiLG51bGwsIkEzIiwiODMxIl1dXQ=="
       }
     ],
     "options_found": 7
@@ -660,9 +660,9 @@
     "min_layover_min": 65,
     "overnight": false,
     "flight_numbers": "KL 1254, KL 1957",
-    "price_total": 1716,
-    "price_pp": 286,
-    "departure_token": "WyJDalJJYTNkR1MwWnJUa3hRUmxWQlF6ZFJXSGRDUnkwdExTMHRMUzB0TFhaM1ltZHFPRUZCUVVGQlIzSndNazFuUkZWdFNTMUJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l2T01KRUFJYUEwVlZVamdjY1BUMkNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ==",
+    "price_total": 1518,
+    "price_pp": 253,
+    "departure_token": "WyJDalJJTjA1eWNXUmhWV1ExV0VsQlIwTjRZVkZDUnkwdExTMHRMUzB0TFhscFltdGhOMEZCUVVGQlIzSnlURTlWUW1WRWVHOUJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0k3S0VKRUFJYUEwVlZVamdjY09XMkNnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTgiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOCIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ==",
     "outbound": "2027-06-18",
     "return": "2027-06-26",
     "price_level": "low",
@@ -902,7 +902,7 @@
   "2027-06-19|2027-06-26": {
     "outbound": "2027-06-19",
     "return": "2027-06-26",
-    "checked_at": "2026-11-03T14:51+02:00",
+    "checked_at": "2026-11-04T15:02+02:00",
     "price_level": "low",
     "typical_low_pp": 308,
     "typical_high_pp": 400,
@@ -923,9 +923,9 @@
         "min_layover_min": 65,
         "overnight": false,
         "flight_numbers": "KL 1254, KL 1957",
-        "price_total": 1602,
-        "price_pp": 267,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZzlMVERFeU5UUjhTMHd4T1RVM0l6SWFDd2k4NHdrUUFob0RSVlZTT0J4dzlQWUsiLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
+        "price_total": 1584,
+        "price_pp": 264,
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZzFMVERFeU5UUjhTMHd4T1RVM0dnc0l0TlVKRUFJYUEwVlZVamdjY09yd0NnPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBTVMiLG51bGwsIktMIiwiMTI1NCJdLFsiQU1TIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiS0wiLCIxOTU3Il1dXQ=="
       },
       {
         "airlines": "Norwegian",
@@ -942,9 +942,9 @@
         "min_layover_min": null,
         "overnight": false,
         "flight_numbers": "D8 2962",
-        "price_total": 1902,
-        "price_pp": 317,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZ1pFT0RJNU5qSWFDd2pJelFzUUFob0RSVlZTT0J4d3l2d00iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkQ4IiwiMjk2MiJdXV0="
+        "price_total": 1782,
+        "price_pp": 297,
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZ1pFT0RJNU5qSWFDd2pvN3dvUUFob0RSVlZTT0J4dzBKNE0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkQ4IiwiMjk2MiJdXV0="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -964,7 +964,7 @@
         "flight_numbers": "VL 2467, A3 803",
         "price_total": 2475,
         "price_pp": 412,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZzVXVERJME5qZDhRVE00TURNak1Sb0xDS2lORHhBQ0dnTkZWVkk0SEhDSzhSQT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiQTMiLCI4MDMiXV1d"
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZ3hXVERJME5qZDhRVE00TURNYUN3aW9qUThRQWhvRFJWVlNPQnh3a1lBUiIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIk1VQyIsbnVsbCwiVkwiLCIyNDY3Il0sWyJNVUMiLCIyMDI3LTA2LTE5IiwiQVRIIixudWxsLCJBMyIsIjgwMyJdXV0="
       },
       {
         "airlines": "Lufthansa City Airlines + Lufthansa",
@@ -984,7 +984,7 @@
         "flight_numbers": "VL 2467, LH 1750",
         "price_total": 2493,
         "price_pp": 416,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZzlXVERJME5qZDhURWd4TnpVd0l6SWFDd2l3bXc4UUFob0RSVlZTT0J4dzVvQVIiLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZzFXVERJME5qZDhURWd4TnpVd0dnc0lzSnNQRUFJYUEwVlZVamdjY1B5UEVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJNVUMiLG51bGwsIlZMIiwiMjQ2NyJdLFsiTVVDIiwiMjAyNy0wNi0xOSIsIkFUSCIsbnVsbCwiTEgiLCIxNzUwIl1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Aegean",
@@ -1004,7 +1004,7 @@
         "flight_numbers": "VL 853, A3 831",
         "price_total": 2523,
         "price_pp": 420,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZzFXVERnMU0zeEJNemd6TVNNeUdnc0kwTElQRUFJYUEwVlZVamdjY09TYUVRPT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJGUkEiLG51bGwsIlZMIiwiODUzIl0sWyJGUkEiLCIyMDI3LTA2LTE5IiwiQVRIIixudWxsLCJBMyIsIjgzMSJdXV0="
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZ3RXVERnMU0zeEJNemd6TVJvTENOQ3lEeEFDR2dORlZWSTRISENScWhFPSIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkEzIiwiODMxIl1dXQ=="
       },
       {
         "airlines": "Lufthansa City Airlines + Lufthansa",
@@ -1024,7 +1024,7 @@
         "flight_numbers": "VL 853, LH 1280",
         "price_total": 3085,
         "price_pp": 514,
-        "departure_token": "WyJDalJJWTJodGFsbzBZbkl0TmxGQlJHWkZPR2RDUnkwdExTMHRMUzB0TFhaM2VXc3pNVUZCUVVGQlIzSndNazFyU21rd2VHZEJFZzVXVERnMU0zeE1TREV5T0RBak1Sb0xDTHpwRWhBQ0dnTkZWVkk0SEhDcWhSVT0iLFtbIkhFTCIsIjIwMjctMDYtMTkiLCJGUkEiLG51bGwsIlZMIiwiODUzIl0sWyJGUkEiLCIyMDI3LTA2LTE5IiwiQVRIIixudWxsLCJMSCIsIjEyODAiXV1d"
+        "departure_token": "WyJDalJJTFVwQ1pubERkVjh0WW5kQlNUTXlOVkZDUnkwdExTMHRMUzB0TFhaM2VXUXpNa0ZCUVVGQlIzSnlURTg0UlVGdVMwTkJFZ3hXVERnMU0zeE1TREV5T0RBYUN3aTg2UklRQWhvRFJWVlNPQnh3alpnViIsW1siSEVMIiwiMjAyNy0wNi0xOSIsIkZSQSIsbnVsbCwiVkwiLCI4NTMiXSxbIkZSQSIsIjIwMjctMDYtMTkiLCJBVEgiLG51bGwsIkxIIiwiMTI4MCJdXV0="
       }
     ],
     "options_found": 8
